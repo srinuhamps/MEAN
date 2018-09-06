@@ -1,5 +1,4 @@
-import express, { Request, Response, NextFunction } from 'express';
-
+import express, {Request, Response, NextFunction} from 'express';
 import path from 'path';
 const router = express.Router();
 

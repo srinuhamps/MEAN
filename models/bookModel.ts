@@ -1,16 +1,16 @@
 import mongoose from 'mongoose';
 
-//Define a schema
-var Schema = mongoose.Schema;
+const schema = mongoose.Schema;
 
 export interface IBook extends mongoose.Document {
     title: string;
     genre: string;
     author: number;
     read: boolean;
-}
+};
 
-var booksSchema = new Schema({
+
+const bookModel = new schema({
     title: {
         type: String
     },
@@ -24,6 +24,4 @@ var booksSchema = new Schema({
         type: Boolean, default: false
     }
 });
-
-
-export default mongoose.model('books', booksSchema);
+export default mongoose.model('Book', bookModel);
